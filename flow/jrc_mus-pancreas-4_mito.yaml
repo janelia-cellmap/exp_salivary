@@ -1,0 +1,35 @@
+input: /nrs/cellmap/data/jrc_mus-pancreas-4/jrc_mus-pancreas-4.zarr/recon-1/em/fibsem-uint8
+queue: gpu_h100
+charge_group: cellmap
+json_data:
+  input_norm:
+    MinMaxNormalizer:
+      min_value: 0
+      max_value: 250
+      invert: false
+    LambdaNormalizer:
+      expression: x*2-1
+  postprocess: {}
+runs:
+  mito_mouse_16_362000:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250806_mito_mouse_distance_16nm/model_checkpoint_362000
+    res: 16
+    classes:
+    - mito
+  setup15_lsd_80k:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/exp_salivary/runs/setup_15/model_checkpoint_80000
+    res: 16
+    classes:
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito
+      - mito

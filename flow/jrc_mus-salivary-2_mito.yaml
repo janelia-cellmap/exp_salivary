@@ -1,0 +1,33 @@
+input: /nrs/cellmap/data/jrc_mus-salivary-2/jrc_mus-salivary-2.zarr/recon-1/em/fibsem-uint8
+queue: gpu_h100
+charge_group: cellmap
+json_data:
+  input_norm:
+    MinMaxNormalizer:
+      min_value: 0
+      max_value: 250
+      invert: false
+    LambdaNormalizer:
+      expression: x*2-1
+  postprocess: {}
+runs:
+  mito_mouse_16_362000:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250806_mito_mouse_distance_16nm/model_checkpoint_362000
+    res: 16
+    classes:
+    - mito
+  mito_mouse_16_90000:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250806_mito_mouse_distance_16nm/model_checkpoint_90000
+    res: 16
+    classes:
+    - mito
+  mito_all_mixed_16_568000:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250725_mito_all_mixed_distance_16nm/model_checkpoint_568000
+    res: 16
+    classes:
+    - mito
+  mito_all_mixed_16_80000:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250725_mito_all_mixed_distance_16nm/model_checkpoint_80000
+    res: 16
+    classes:
+    - mito

@@ -1,0 +1,23 @@
+data_path: "/nrs/cellmap/data/jrc_mus-salivary-2/jrc_mus-salivary-2.zarr/recon-1/em/fibsem-uint8/s1"
+charge_group: "cellmap"
+queue: "gpu_h100"
+tmp_dir: "/nrs/cellmap/zouinkhim/predictions/salivary/tmp"
+json_data: {"input_norm": {"MinMaxNormalizer": {"min_value": 0.0, "max_value": 250.0, "invert": false}, "LambdaNormalizer": {"expression": "x*2-1"}}, "postprocess": {}}
+
+models:
+  - type: "fly"
+    scale: "s1"
+    resolution: 16
+    checkpoint: "/groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250806_mito_mouse_distance_16nm/model_checkpoint_362000"
+    name: "mito"
+    classes:
+      - "mito"
+
+
+### blockwise
+output_path: "/nrs/cellmap/zouinkhim/predictions/salivary/jrc_mus-salivary-2.zarr/20250806_mito_mouse__362000"
+# optional output channel-if not set output all channels from model
+# output_channels:mito,ld
+task_name: "sal_2_20250825_mito_mouse__362000"
+workers: 12
+create : True
