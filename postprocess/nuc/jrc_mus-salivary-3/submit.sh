@@ -1,0 +1,1 @@
+bsub -n 4 -P cellmap connected-components -n 12 /groups/cellmap/cellmap/zouinkhim/real_exp_salivary_to_rename/postprocess/nuc/jrc_mus-salivary-2

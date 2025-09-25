@@ -1,0 +1,21 @@
+jobqueue:
+  lsf:
+    ncpus: 12       # cores per job chunk
+    processes: 12  # worker processes per chunk
+    cores: 12      # threads per process (1 thread each)
+    memory: 120GB  # 15 GB per slot
+    walltime: 08:00
+    mem: 12000000000
+    use-stdin: true
+    log-directory: job-logs
+    name: cellmap-analyze
+    project: cellmap
+
+distributed:
+  scheduler:
+    work-stealing: true
+  admin:
+    log-format: '[%(asctime)s] %(levelname)s %(message)s'
+    tick:
+      interval: 20ms
+      limit: 3h

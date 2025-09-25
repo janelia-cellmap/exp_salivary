@@ -1,0 +1,7 @@
+input_path: /nrs/cellmap/zouinkhim/predictions/salivary/jrc_mus-salivary-1.zarr/20250806_mito_mouse__362000/mito/s0
+output_path: /nrs/cellmap/zouinkhim/predictions/salivary/jrc_mus-salivary-1.zarr/postprocess/mito
+intensity_threshold_minimum: 0.55
+minimum_volume_nm_3: 2E7
+delete_tmp: true
+connectivity: 1
+fill_holes: true

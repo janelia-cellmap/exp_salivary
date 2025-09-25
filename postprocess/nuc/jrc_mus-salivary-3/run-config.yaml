@@ -1,0 +1,7 @@
+input_path: /nrs/cellmap/zouinkhim/predictions/salivary/jrc_mus-salivary-3.zarr/20250806_nuc_mouse_distance_32nm__342000/nuc/s0
+output_path: /nrs/cellmap/zouinkhim/predictions/salivary/jrc_mus-salivary-3.zarr/postprocess/nuc
+intensity_threshold_minimum: 0.5
+minimum_volume_nm_3: 1.7E9
+delete_tmp: true
+connectivity: 1
+fill_holes: true
