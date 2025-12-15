@@ -8,7 +8,7 @@ models:
   - type: "fly"
     scale: "s1"
     resolution: 32
-    checkpoint: "/groups/cellmap/cellmap/zouinkhim/c-elegen/v3/train/runs/20250806_nuc_mouse_distance_32nm/model_checkpoint_342000"
+    checkpoint: "/groups/cellmap/cellmap/zouinkhim/exp_c-elegen/v3/train/runs/20250806_nuc_mouse_distance_32nm/model_checkpoint_342000"
     name: "nuc"
     classes:
       - "nuc"

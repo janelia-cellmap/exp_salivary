@@ -1,0 +1,18 @@
+input: /nrs/cellmap/data/jrc_mus-salivary-2/jrc_mus-salivary-2.zarr/recon-1/em/fibsem-uint8
+queue: gpu_h100
+charge_group: cellmap
+json_data:
+  input_norm:
+    MinMaxNormalizer:
+      min_value: 0
+      max_value: 250
+      invert: false
+    LambdaNormalizer:
+      expression: x*2-1
+  postprocess: {}
+runs:
+  setup_46_580:
+    checkpoint: /groups/cellmap/cellmap/zouinkhim/exp_salivary/runs/setup_46/model_checkpoint_580000
+    res: 8
+    classes:
+    - er
