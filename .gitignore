@@ -7,3 +7,8 @@ daisy_logs
 prediction_logs
 *.err
 *.out
+python_deps
+*.onnx
+*.pt2
+*.pt
+.claude/
