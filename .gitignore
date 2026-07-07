@@ -9,6 +9,9 @@ prediction_logs
 *.out
 python_deps
 *.onnx
+*.onnx.data
 *.pt2
 *.pt
+*.ts
 .claude/
+__pycache__
